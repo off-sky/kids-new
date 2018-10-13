@@ -10,6 +10,11 @@
     width: 100vw;
     width: 100%;
     overflow-y: auto;
+
+    &__read-more-link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 

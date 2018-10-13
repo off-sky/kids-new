@@ -1,5 +1,8 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
+import { reviews } from '../../../types/reviews';
+import { InfoPopupService } from '../../core/info-popup/info-popup.service';
 
 @Component({
   selector: 'y-landing',
@@ -15,13 +18,33 @@ export class LandingComponent implements OnInit {
     phone: '',
     service: ''
   }
+  public reviews: reviews.Review[];
+  @ViewChild('contactForm') public contactForm: ElementRef;
 
   constructor(
-    private matDialog: MatDialog
+    private matDialog: MatDialog,
+    private infoPopup: InfoPopupService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
+    this.reviews = this.route.snapshot.data.reviews;
+    console.log(this.reviews);
   }
+
+
+  public scrollFormIntoView(): void {
+    if (this.contactForm) {
+      const el  = this.contactForm.nativeElement as HTMLDivElement;
+      window.requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth'}));
+    }
+  }
+
+
+  public openReviewDetails(rev: reviews.Review): void {
+    this.infoPopup.open('Відгук', rev.text);
+  }
+
 
   public onFormRowClick(label: HTMLDivElement, input: HTMLInputElement, prop: string) {
     console.log('On click');

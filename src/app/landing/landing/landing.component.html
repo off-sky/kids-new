@@ -8,7 +8,9 @@
             <span class="y-landing__jumbotron__text__author">Франк Сміт.</span>
         </div>
         <div class="y-landing__jumbotron__order-now">
-          <div class="y-landing__jumbotron__order-btn">
+          <div class="y-landing__jumbotron__order-btn"
+               (click)="scrollFormIntoView()"
+            >
             Записатись на пробний урок
           </div>
         </div>
@@ -71,7 +73,23 @@
     <div class="y-landing__reviews">
       <div class="y-landing__reviews__title">Ось що про нас кажуть:</div>
       <div class="y-landing__reviews__items-wrap">
-        <div class="y-landing__reviews__item">
+        <div *ngFor="let rev of reviews" class="y-landing__reviews__item">
+          <div class="y-landing__reviews__item__left">
+              <!-- {{ rev.authorName }} -->
+              <!-- <div class="y-landing__reviews__item__photo">
+                <img src="/assets/img/client_cropped.jpg" alt="Review author photo" width="100" height="100">
+              </div> -->
+          </div>
+          <div class="y-landing__reviews__item__right">
+              <div class="y-landing__reviews__item__text">{{ rev.textBrief }}
+                <span *ngIf="rev.isTruncated"
+                       class="y-landing__read-more-link"
+                      (click)="openReviewDetails(rev)">Далі</span>
+              </div>
+              <div class="y-landing__reviews__item__author">{{ rev.authorName }}</div>
+          </div>
+        </div>
+        <!-- <div class="y-landing__reviews__item">
           <div class="y-landing__reviews__item__left">
               <div class="y-landing__reviews__item__photo">
                 <img src="/assets/img/client_cropped.jpg" alt="Review author photo" width="100" height="100">
@@ -92,21 +110,10 @@
               <div class="y-landing__reviews__item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
               <div class="y-landing__reviews__item__author">Іванова Іванна Іванівна</div>
           </div>
-        </div>
-        <div class="y-landing__reviews__item">
-          <div class="y-landing__reviews__item__left">
-              <div class="y-landing__reviews__item__photo">
-                <img src="/assets/img/client_cropped.jpg" alt="Review author photo" width="100" height="100">
-              </div>
-          </div>
-          <div class="y-landing__reviews__item__right">
-              <div class="y-landing__reviews__item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-              <div class="y-landing__reviews__item__author">Іванова Іванна Іванівна</div>
-          </div>
-        </div>
+        </div> -->
       </div>
     </div>
-    <div class="y-landing__contact-us">
+    <div #contactForm class="y-landing__contact-us">
       <div class="y-landing__contact-us__background">
           <div class="y-landing__contact-us__content-wrap">
               <div class="y-landing__contact-us__title">Чекаємо на Вас!</div>

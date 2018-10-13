@@ -4,6 +4,7 @@ import { LandingComponent } from './landing/landing.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { ReviewsResolver } from './reviews-resolver';
 
 @NgModule({
   imports: [
@@ -13,6 +14,9 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   declarations: [LandingComponent],
+  providers: [
+    ReviewsResolver
+  ],
   exports: [
     LandingComponent
   ]
