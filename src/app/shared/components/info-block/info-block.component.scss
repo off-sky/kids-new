@@ -1,0 +1,13 @@
+@import '../../../global_styles/variables.scss';
+
+.y-info-block {
+    margin-bottom: 20px;
+    &__label {
+        color: $grey-light;
+        font-size: 13px;
+    }
+    &__text {
+        color: $grey-basic;
+        font-size: 14px;
+    }
+}

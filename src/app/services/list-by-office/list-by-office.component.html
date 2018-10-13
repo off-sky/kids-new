@@ -1,0 +1,23 @@
+<div class="y-list-by-office">
+  <y-section>
+    <y-section-title *ngIf="school$ | async; let school;">
+      Послуги {{ school.city }} ({{ school.streetAddress }})
+    </y-section-title>
+    <y-section-content>
+
+      <div  class="y-list-by-office__services">
+          <y-cards-wrap>
+              <!-- English -->
+              <y-card *ngFor="let lang of langs$ | async">
+                <div class="y-service-card {{lang}}" [routerLink]="[ lang ]">
+                  <div class="y-service-card__image"></div>
+                  <div class="y-service-card__label">
+                    {{ getDisplayLanguageName(lang) }}
+                  </div>
+                </div>
+              </y-card>      
+          </y-cards-wrap>
+      </div>
+    </y-section-content>
+  </y-section>
+</div>

@@ -1,0 +1,49 @@
+@import '../../../global_styles/variables.scss';
+
+.y-search-input {
+    outline: none;
+    border: 1px solid $grey-super-light;
+    padding: 2px 10px;
+    width: 170px;
+
+
+    
+
+    &__icon {
+        cursor: pointer;
+        &.search {
+            background: url('/assets/icons/search.svg') center center no-repeat;
+        }
+        &.clear {
+            position: relative;
+            top: 1px;
+            &:hover {
+                #input-icon {
+                    fill: $grey-basic;
+                }
+            }
+        }
+        &-wrap {
+            position: absolute;
+            right: 5px;
+            top: 3px;
+        }
+    }
+
+    &__wrap {
+        position: relative;
+    }
+}
+
+
+.y-search-input:focus {
+    border-color: $grey-basic;
+}
+
+#input-icon {
+    fill: $grey-super-light;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}

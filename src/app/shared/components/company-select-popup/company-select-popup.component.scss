@@ -1,0 +1,33 @@
+@import '../../../global_styles/variables.scss';
+
+.y-popup-header {
+    // margin-top: -30px; 
+}
+
+
+.y-company-select-popup {
+    overflow: auto;
+    max-height: 300px;
+}
+
+
+.y-company-select-popup__item {
+    cursor: pointer;
+    margin-bottom: 40px;
+    padding: 20px;
+    &:hover {
+        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.3);
+    }
+    &.active {
+        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.3);
+    }
+    &__address {
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    &__logo {
+        display: flex;
+        justify-content: center;
+    }
+}

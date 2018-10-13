@@ -1,0 +1,74 @@
+@import '../../global_styles/variables.scss';
+
+.y-teacher-card {
+    width: 245px;
+    height: 395px;
+    border: 1px solid #109B88;
+    font-size: 16px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.3);
+    }
+    &__body {
+        padding: 0 20px 20px;
+        position: relative;
+        height: 215px;
+    }
+    &__brief {
+        font-size: 70%;
+        color: $grey-basic;
+        text-align: justify;
+        height: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__top {
+        background-color: #109B88;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+    }
+    &__more-btn {
+        color: white;
+        cursor: pointer;
+        font-size: 80%;
+        text-align: center;
+        background-color: #109B88;
+        width: 100px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__more-btn-wrap {
+        position: absolute;
+        bottom: -30px;
+        display: flex;
+        justify-content: center;
+        width: 210px;
+    }
+    &__name {
+        margin: 60px 0 5px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 100%;
+        height: 45px;
+        overflow: hidden;
+    }
+    &__specialty {
+        font-size: 70%;
+        color: $grey-light;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    &__photo-wrap {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+        bottom: -10px;
+        border: 2px solid white;
+    }
+}

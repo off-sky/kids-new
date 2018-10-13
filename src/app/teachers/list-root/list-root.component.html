@@ -1,0 +1,75 @@
+<div class="y-teachers-root">
+  <y-section>
+    <y-section-title>
+      <div class="y-searchable-header">
+        <div>Викладачі</div>
+        <y-search-input (changed)="onSearchInputChange($event)"></y-search-input>
+      </div>
+    </y-section-title>
+    <y-section-content>
+        <div *ngIf="!isSearchActive">
+            <y-fold-list-item>
+                <y-fold-list-anchor>
+                  Хмельницький
+                </y-fold-list-anchor>
+                <y-fold-list-content>
+          
+                  <y-fold-list-content-item [routerLink]="['/teachers', 'list', SchoolIds.NARODNA_VOLIA ]">
+                    <div class="y-service-card narodna_volia">
+                      <div class="y-service-card__image"></div>
+                      <div class="y-service-card__label">
+                        Вул. Народної Волі, 1A
+                      </div>
+                    </div>
+                  </y-fold-list-content-item>
+          
+                  <!-- <y-fold-list-content-item>
+                      <div class="y-service-card narodna_volia" [routerLink]="['/services', 'list', SchoolIds.NARODNA_VOLIA ]">
+                        <div class="y-service-card__image"></div>
+                        <div class="y-service-card__label">
+                          Вул. Народної Волі і Справедливості, 6
+                        </div>
+                      </div>
+                  </y-fold-list-content-item> -->
+          
+                </y-fold-list-content>
+              </y-fold-list-item>
+          
+          
+              <y-fold-list-item>
+                  <y-fold-list-anchor>
+                    Ірпінь
+                  </y-fold-list-anchor>
+                  <y-fold-list-content>
+            
+                      <y-fold-list-content-item [routerLink]="['/teachers', 'list', SchoolIds.IRPIN ]">
+                        <div class="y-service-card irpin">
+                          <div class="y-service-card__image"></div>
+                          <div class="y-service-card__label">
+                            Вул. Шевченка, 25
+                          </div>
+                        </div>
+                      </y-fold-list-content-item>
+            
+            
+                  </y-fold-list-content>
+                </y-fold-list-item>
+        </div>
+        <div *ngIf="isSearchActive">
+            <y-no-results-placeholder *ngIf="!isResults"></y-no-results-placeholder>
+            <y-cards-wrap *ngIf="isResults">
+              <y-card *ngFor="let teacher of teachersFound"
+                      [routerLink]="['/teachers', teacher.office, teacher.id ]"
+                >
+                <y-teacher-card [teacher]="teacher">
+                </y-teacher-card>
+              </y-card>
+            </y-cards-wrap>
+        </div>
+        
+        
+          
+      </y-section-content>
+  </y-section>
+    
+</div>

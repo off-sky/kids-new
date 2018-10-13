@@ -1,0 +1,20 @@
+
+<div *ngIf="teacher" class="y-teacher-card">
+    <div class="y-teacher-card__top">
+      <div class="y-teacher-card__photo-wrap">
+        <img class="y-teacher-card__photo" src="{{teacher.photo}}" width="120">
+      </div>
+    </div>
+    <div class="y-teacher-card__body">
+      <div class="y-teacher-card__name">{{ teacher.displayName }}</div>
+      <div class="y-teacher-card__specialty">{{ teacher.displaySpecialty }}</div>
+      <div class="y-teacher-card__brief">
+          {{ teacher.brief }}
+      </div>
+      <div class="y-teacher-card__more-btn-wrap">
+          <div class="y-teacher-card__more-btn">
+            Більше
+          </div>
+      </div>
+    </div>
+  </div>

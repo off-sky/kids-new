@@ -1,0 +1,14 @@
+.y-fold-list-content {
+    &__outer {
+        height: 0;
+        -webkit-transition: height 0.3s ease-in-out;
+        -moz-transition: height 0.3s ease-in-out;
+        -o-transition: height 0.3s ease-in-out;
+        transition: height 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    &__inner {
+        height: auto;
+        visibility: hidden;
+    }
+}

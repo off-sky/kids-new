@@ -1,0 +1,191 @@
+<div class="y-landing__top-bar__wrap">
+  <div class="y-landing__top-bar">
+    <div class="y-landing__top-bar__left">
+
+      <!-- Company selector -->
+      <div class="y-landing__top-bar__company-selector">
+          <div *ngIf="currentSchool$ | async; let currSchool" class="y-company-selector">
+
+              <!-- Logo -->
+              <span class="y-company-selector__logo"
+                    [routerLink]="['/', currSchool.id ]"
+                >
+                <img src="{{currSchool.imgData}}" width="90">
+              </span>
+              <div class="y-company-selector__trigger" (click)="onCompanySelectorTriggerClick()">
+                    <!-- Address -->
+                    <div class="y-company-selector__address">
+                        <div class="y-company-selector__address__item">{{ currSchool.city }}</div>
+                        <div class="y-company-selector__address__item">{{ currSchool.streetAddress }}</div>
+                    </div>
+          
+                    <!-- Dropdown icon -->
+                    <div class="y-company-selector__dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              version="1.1" id="Capa_1" x="0px" y="0px"
+                              width="10px" height="10px" viewBox="0 0 404.308 404.309"
+                              style="enable-background:new 0 0 404.308 404.309;" xml:space="preserve" class=""><g><g>
+                            <path class="drop-down-arrow" d="M0,101.08h404.308L202.151,303.229L0,101.08z" data-original="#000000"/>
+                          </g></g>
+                        </svg>
+                    </div>
+              </div>
+              
+    
+          </div>
+      </div>
+      <!-- EOF Company Selector -->
+      
+      <div class="y-landing__menu desktop">
+        <div class="y-landing__menu__item expand-menu-25"
+             [ngClass]="{'active': currentSection === Sections.SERVICES }"
+             >
+          <span class="menu-fade-in" [routerLink]="['services']"
+                
+            >
+            Послуги
+          </span>
+        </div>
+        <div class="y-landing__menu__item expand-menu-25" [ngClass]="{'active': currentSection === Sections.TEACHERS }">
+          <span class="menu-fade-in" [routerLink]="['teachers']"
+                
+            >
+            Викладачі
+          </span>
+        </div>
+        <div class="y-landing__menu__item expand-menu-25" [ngClass]="{'active': currentSection === Sections.CONTACT_INFO }">
+          <span class="menu-fade-in" [routerLink]="['contact-info']"
+                
+            >
+            Контакти
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="y-landing__top-bar__right">
+      <a href="https://www.facebook.com/kids.khm"><div class="y-landing__facebook-icon"></div></a>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="y-landing__top-bar__mobile-menu-wrap">
+      <div class="y-landing__menu mobile">
+        <div class="y-landing__menu__item expand-menu-25"
+             [ngClass]="{'active': currentSection === Sections.SERVICES }"
+          >
+          <span class="menu-fade-in" [routerLink]="['services']">Послуги</span>
+        </div>
+        <div class="y-landing__menu__item expand-menu-25"
+             [ngClass]="{'active': currentSection === Sections.TEACHERS }"
+          >
+          <span class="menu-fade-in" [routerLink]="['teachers']">Викладачі</span>
+        </div>
+        <div class="y-landing__menu__item expand-menu-25"
+             [ngClass]="{'active': currentSection === Sections.CONTACT_INFO }"
+          >
+          <span class="menu-fade-in" [routerLink]="['contact-info']">Контакти</span>
+        </div>
+      </div>
+  </div>
+  
+</div>
+
+<!-- Glow -->
+
+<div class="y-landing__top-bar__wrap glow">
+  <div class="y-landing__top-bar">
+    <div class="y-landing__top-bar__left">
+
+      <!-- Company selector -->
+      <div class="y-landing__top-bar__company-selector">
+          <div *ngIf="currentSchool$ | async; let currSchool" class="y-company-selector">
+
+              <!-- Logo -->
+              <span class="y-company-selector__logo"
+                    [routerLink]="['/', currSchool.id ]"
+                >
+                <img src="{{currSchool.imgData}}" width="90">
+              </span>
+              <div class="y-company-selector__trigger" (click)="onCompanySelectorTriggerClick()">
+                    <!-- Address -->
+                    <div class="y-company-selector__address">
+                        <div class="y-company-selector__address__item">{{ currSchool.city }}</div>
+                        <div class="y-company-selector__address__item">{{ currSchool.streetAddress }}</div>
+                    </div>
+          
+                    <!-- Dropdown icon -->
+                    <div class="y-company-selector__dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              version="1.1" id="Capa_1" x="0px" y="0px"
+                              width="10px" height="10px" viewBox="0 0 404.308 404.309"
+                              style="enable-background:new 0 0 404.308 404.309;" xml:space="preserve" class=""><g><g>
+                            <path class="drop-down-arrow" d="M0,101.08h404.308L202.151,303.229L0,101.08z" data-original="#000000"/>
+                          </g></g>
+                        </svg>
+                    </div>
+              </div>
+              
+    
+          </div>
+      </div>
+      <!-- EOF Company Selector -->
+      
+      <div class="y-landing__menu desktop">
+        <div class="y-landing__menu__item expand-menu-25"
+             [ngClass]="{'active': currentSection === Sections.SERVICES, glow: isGlow }"
+             >
+          <span class="menu-fade-in" [routerLink]="['services']"
+                
+            >
+            Послуги
+          </span>
+        </div>
+        <div class="y-landing__menu__item expand-menu-25"
+             [ngClass]="{'active': currentSection === Sections.TEACHERS, glow: isGlow }">
+          <span class="menu-fade-in" [routerLink]="['teachers']"
+                
+            >
+            Викладачі
+          </span>
+        </div>
+        <div class="y-landing__menu__item expand-menu-25"
+             [ngClass]="{'active': currentSection === Sections.CONTACT_INFO, glow: isGlow }">
+          <span class="menu-fade-in" [routerLink]="['contact-info']"
+                
+            >
+            Контакти
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="y-landing__top-bar__right">
+      <a href="https://www.facebook.com/kids.khm"><div class="y-landing__facebook-icon"></div></a>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="y-landing__top-bar__mobile-menu-wrap">
+      <div class="y-landing__menu mobile">
+        <div class="y-landing__menu__item expand-menu-25"
+             [ngClass]="{'active': currentSection === Sections.SERVICES, glow: isGlow }"
+          >
+          <span class="menu-fade-in" [routerLink]="['services']">Послуги</span>
+        </div>
+        <div class="y-landing__menu__item expand-menu-25"
+             [ngClass]="{'active': currentSection === Sections.TEACHERS, glow: isGlow }"
+          >
+          <span class="menu-fade-in" [routerLink]="['teachers']">Викладачі</span>
+        </div>
+        <div class="y-landing__menu__item expand-menu-25"
+             [ngClass]="{'active': currentSection === Sections.CONTACT_INFO, glow: isGlow }"
+          >
+          <span class="menu-fade-in" [routerLink]="['contact-info']">Контакти</span>
+        </div>
+      </div>
+  </div>
+  
+</div>
+
+

@@ -1,0 +1,14 @@
+@import '../../../global_styles/variables.scss';
+
+.y-close-btn {
+    width: 15px;
+    height: 10px;
+    cursor: pointer;
+}
+
+#close {
+    fill: $grey-light;
+    &:hover {
+        fill: $grey-basic;
+    }
+}

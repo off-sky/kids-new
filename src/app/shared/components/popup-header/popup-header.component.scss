@@ -1,0 +1,13 @@
+@import '../../../global_styles/variables.scss';
+
+.y-popup-header {
+    margin: -24px -24px 20px -24px;
+    padding: 10px 24px;
+    border-bottom: 1px solid $grey-light;
+    display: flex;
+    justify-content: space-between;
+    &__title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

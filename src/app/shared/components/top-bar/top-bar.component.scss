@@ -1,0 +1,222 @@
+@import '../../../global_styles/variables.scss';
+
+.drop-down-arrow {
+    fill: $grey-light;
+}
+
+.y-landing__facebook-icon {
+    background: url('/assets/icons/facebook.svg') center center/32px 32px no-repeat;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+}
+
+
+.y-company-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__address {
+        font-size: 54%;
+        color: $grey-light;
+        margin-right: 10px;
+    }
+    &__logo {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    &__trigger {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 2px 10px;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+    }
+    &__dropdown-icon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            .drop-down-arrow {
+                fill: $grey-basic;
+            }
+        }
+    }
+}
+
+
+.y-landing__top-bar {
+    display: flex;
+    &__company-selector {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+    }
+    &__left {
+        color: $blue-basic;
+        width: 80%;
+        display: flex;
+    }
+    &__mobile-menu-wrap {
+        text-align: center;
+    }
+    &__right {
+        text-align: right;
+        width: 20%;
+    }
+    &__wrap {
+        position: fixed;
+        padding: 10px $padding;
+        font-size: 16px;
+        @media (min-width: 1200px) {
+            font-size: 18px;
+        }
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 4;
+        box-shadow: 1px -3px 6px 1px rgba(0, 0, 0, 0.8);
+        &.glow {
+            z-index: 3;
+            box-shadow: none;
+            .y-landing__menu__item.active.glow {
+                box-shadow: 0px 4px 30px $blue-basic;
+            }
+            .y-landing__menu.desktop .y-landing__menu__item.active.glow {
+                box-shadow: 0px 4px 35px $blue-basic;
+            }
+        }
+    }
+}
+
+
+
+.y-landing__menu {
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    &__item {
+        border-left: 2px solid $blue-basic;
+        color: $blue-basic;
+        opacity: 0.7;
+        font-size: 80%;
+        cursor: pointer;
+        overflow-x: hidden;
+        width: 0px;
+        &.active {
+            opacity: 1;
+            font-weight: 500;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &.desktop {
+        display: none;
+        @media(min-width:650px) {
+            display: inline-flex;
+        }
+    }
+
+    &.mobile {
+        justify-content: center;
+        margin-top: 20px;
+        .y-landing__menu__item {
+            &:first-child {
+                border-left: none;
+            }
+        }
+        @media(min-width:650px) {
+            display: none;
+        }
+    }
+}
+
+
+// MENU ANIMATIONS
+
+
+
+// - fade in
+.menu-fade-in {
+    opacity: 0;
+    -webkit-animation: menu-fade-in 1s 1s forwards; /* Safari 4+ */
+    -moz-animation:    menu-fade-in 1s 1s forwards; /* Fx 5+ */
+    -o-animation:      menu-fade-in 1s 1s forwards; /* Opera 12+ */
+    animation:         menu-fade-in 1s 1s forwards; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes menu-fade-in {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes menu-fade-in {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-o-keyframes menu-fade-in {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes menu-fade-in {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+// -expand
+.expand-menu-25 {
+    -webkit-animation: menu-expand-25 1s forwards; /* Safari 4+ */
+    -moz-animation:    menu-expand-25 1s forwards; /* Fx 5+ */
+    -o-animation:      menu-expand-25 1s forwards; /* Opera 12+ */
+    animation:         menu-expand-25 1s forwards; /* IE 10+, Fx 29+ */
+}
+
+// .expand-menu-30 {
+//     -webkit-animation: menu-expand-30 3s forwards; /* Safari 4+ */
+//     -moz-animation:    menu-expand-30 3s forwards; /* Fx 5+ */
+//     -o-animation:      menu-expand-30 3s forwards; /* Opera 12+ */
+//     animation:         menu-expand-30 3s forwards; /* IE 10+, Fx 29+ */
+// }
+
+@-webkit-keyframes menu-expand-25 {
+    0%   { width: 0%; padding: 0;}
+    100% { width: 25%; padding: 0 20px;}
+}
+@-moz-keyframes menu-expand-25 {
+    0%   { width: 0%; padding: 0;}
+    100% { width: 25%; padding: 0 20px;}
+}
+@-o-keyframes menu-expand-25 {
+    0%   { width: 0%; padding: 0;}
+    100% { width: 25%; padding: 0 20px;}
+}
+@keyframes menu-expand-25 {
+    0%   { width: 0%; padding: 0;}
+    100% { width: 25%; padding: 0 20px;}
+}
+
+// @-webkit-keyframes menu-expand-30 {
+//     0%   { width: 0px; }
+//     100% { width: 35%; }
+// }
+// @-moz-keyframes menu-expand-30 {
+//     0%   { width: 0px; }
+//     100% { width: 35%; }
+// }
+// @-o-keyframes menu-expand-30 {
+//     0%   { width: 0px; }
+//     100% { width: 35%; }
+// }
+// @keyframes menu-expand-30 {
+//     0%   { width: 0px; }
+//     100% { width: 35%; }
+// }
+
+
+
+// EOF MENU ANIMATIONS

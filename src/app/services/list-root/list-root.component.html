@@ -1,0 +1,59 @@
+<div class="y-list-root">
+  <y-section>
+  <y-section-title>
+    Послуги
+  </y-section-title>
+    
+  <y-section-content>
+    <y-fold-list-item>
+      <y-fold-list-anchor>
+        Хмельницький
+      </y-fold-list-anchor>
+      <y-fold-list-content>
+
+        <y-fold-list-content-item [routerLink]="['/services', 'list', SchoolIds.NARODNA_VOLIA ]">
+          <div class="y-service-card narodna_volia">
+            <div class="y-service-card__image"></div>
+            <div class="y-service-card__label">
+              Вул. Народної Волі, 1A
+            </div>
+          </div>
+        </y-fold-list-content-item>
+
+        <!-- <y-fold-list-content-item>
+            <div class="y-service-card narodna_volia" [routerLink]="['/services', 'list', SchoolIds.NARODNA_VOLIA ]">
+              <div class="y-service-card__image"></div>
+              <div class="y-service-card__label">
+                Вул. Народної Волі і Справедливості, 6
+              </div>
+            </div>
+        </y-fold-list-content-item> -->
+
+      </y-fold-list-content>
+    </y-fold-list-item>
+
+
+    <y-fold-list-item>
+        <y-fold-list-anchor>
+          Ірпінь
+        </y-fold-list-anchor>
+        <y-fold-list-content>
+  
+            <y-fold-list-content-item [routerLink]="['/services', 'list', SchoolIds.IRPIN ]">
+              <div class="y-service-card irpin">
+                <div class="y-service-card__image"></div>
+                <div class="y-service-card__label">
+                  Вул. Шевченка, 25
+                </div>
+              </div>
+            </y-fold-list-content-item>
+  
+  
+        </y-fold-list-content>
+      </y-fold-list-item>
+      
+  </y-section-content>
+</y-section>
+
+  
+</div>

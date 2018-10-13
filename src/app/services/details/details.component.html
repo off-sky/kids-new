@@ -1,0 +1,75 @@
+<!-- <y-work-in-progress>
+  {{msg}}
+</y-work-in-progress> -->
+<y-section>
+
+    <y-section-title *ngIf="school$ | async; let school;">
+      <y-back-link [url]="['/', school.id, 'services']"></y-back-link>
+      {{ displayLanguage }}
+      <y-crumbs>
+        <y-crumb [routerLink]="['/', school.id, 'services']">Послуги</y-crumb>
+        <y-crumb>
+          {{ displayLanguage }}
+        </y-crumb>
+      </y-crumbs>
+    </y-section-title>
+
+    
+    <y-section-content>
+
+      <!-- English language -->
+      <y-cards-wrap>
+          <y-card *ngFor="let category of categories$ | async">
+          <div class="m-service-card">
+            <div class="m-service-card__header">
+              <div class="m-service-card__header__title">{{ category.title }}</div>
+              <div class="m-service-card__header__subtitle">{{ category.description }}</div>
+            </div>
+          
+          
+            <div class="m-service-card__body">
+          
+              <div *ngFor="let service of category.services" class="m-service-card__item">
+                <div class="m-service-card__description">
+                  <div>
+                      {{ service.description }}
+                      <div *ngIf="service.notes" class="m-service-card__description__notes">
+                        ({{ service.notes }})
+                      </div>
+                  </div>
+                </div>
+                <div class="m-service-card__value">
+                  <span class="m-service-card__value__price">{{ service.amount / 100 | number:'1.0' }}</span>
+                  <span class="m-service-card__value__units">{{ service.amountDescription }}</span>
+                </div>
+              </div>
+          
+          
+            </div>
+            <div *ngIf="category.discounts" class="m-service-card__footer">
+              <div class="m-service-card__footer__header">
+                  <div class="m-service-card__discount-icon"></div>
+                  <div>Знижки:</div>
+              </div>
+              <div *ngFor="let discount of category.discounts" class="m-service-card__footer__item">
+                  <div class="m-service-card__footer__item__anchor">
+                  </div>
+                  <div class="m-service-card__footer__item__description">
+                    {{ discount.description }} - {{ discount.displayAmount }}
+                  </div>
+              </div>
+            </div>
+          </div>
+          </y-card>
+
+          
+      </y-cards-wrap>
+      <!-- EOF English language -->
+    </y-section-content>
+
+  
+    
+    
+
+</y-section>
+

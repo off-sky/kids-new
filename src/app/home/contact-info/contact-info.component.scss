@@ -1,0 +1,25 @@
+.y-contact-info {
+    &__map {
+        display: none;
+        &.mobile {
+            @media(max-width: 650px) {
+                display: block;
+            }
+        }
+        &.tablet {
+            @media(min-width: 650px) and (max-width: 1200px) {
+                display: block;
+            }
+        }
+        &.desktop {
+            @media(min-width: 1200px) {
+                display: block;
+            }
+        }
+    }
+    &__persons {
+        &__item {
+            margin-bottom: 30px; 
+        }
+    }
+}

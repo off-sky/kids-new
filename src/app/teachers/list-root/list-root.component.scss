@@ -1,0 +1,49 @@
+@import '../../global_styles/variables.scss';
+
+
+.y-service-card {
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    border: 1px solid $blue-basic;
+    cursor: pointer;
+    &.narodna_volia {
+        .y-service-card__image {
+            background: url('/assets/img/school_narodna_volia.jpeg') center center no-repeat;
+        }  
+    }
+    &.irpin {
+        .y-service-card__image {
+            background: url('/assets/img/school_irpin.jpg') center center/auto 250px no-repeat;
+        }  
+    }
+
+
+    &:hover {
+        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.3);
+        // .y-service-card__image {
+        //     opacity: 1;
+        // }
+    }
+
+    &__image {
+        width: 250px;
+        height: 250px;
+    }
+    
+    &__label {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        min-height: 30px;
+        text-align: center;
+        padding-top: 5px;
+        background-color: $blue-basic;
+        color: white; 
+    }
+}
+
+.y-searchable-header {
+    display: flex;
+    justify-content: space-between;
+}

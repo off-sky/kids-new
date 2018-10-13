@@ -1,0 +1,44 @@
+@import '../../../global_styles/variables.scss';
+
+#arrow {
+    fill: $grey-light;
+}
+
+.y-fold-list-anchor {
+    font-size: 16px;
+    color: $grey-light;
+    cursor: pointer;
+    
+    &:hover {
+        color: $grey-basic;
+        #arrow {
+            fill: $grey-basic;
+        }
+    }
+
+    &__arrow {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        div {
+            -webkit-transition: -webkit-transform 0.3s ease-in-out;
+            -moz-transition: -moz-transform 0.3s ease-in-out;
+            -o-transition: -o-transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+    }
+
+    &.active {
+        color: $grey-basic;
+        .y-fold-list-anchor__arrow {
+            div {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+            } 
+        }
+        
+     }
+}

@@ -1,0 +1,20 @@
+<y-popup-header matDialogTitle
+                (closed)="onClose()"
+  >
+  Оберіть відділення
+</y-popup-header>
+<div class="y-company-select-popup" matDialogContent>
+  <div *ngFor="let school of allSchools"
+        class="y-company-select-popup__item"
+        [ngClass]="{'active': school.id === currentSchool.id }"
+        (click)="onSchoolSelect(school)"
+    >
+    <div class="y-company-select-popup__item__address">
+      {{ school.city }}, {{ school.streetAddress }}
+    </div>
+    <div class="y-company-select-popup__item__logo">
+      <img src="{{school.imgData}}" width="150" height="50">
+    </div>
+  </div>
+</div>
+

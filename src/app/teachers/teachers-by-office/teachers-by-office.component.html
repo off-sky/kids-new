@@ -1,0 +1,18 @@
+<div *ngIf="school$ | async; let school">
+    <y-section>
+        <y-section-title>
+          <!-- <y-back-link [url]="['teachers']"></y-back-link> -->
+          Викладачі {{ school.city}} ({{ school.streetAddress }})
+        </y-section-title>
+    
+        <y-section-content>
+          <y-cards-wrap>
+            <y-card *ngFor="let teacher of teachers$ | async"
+                    [routerLink]="[teacher.id]"
+              >
+                <y-teacher-card [teacher]="teacher"></y-teacher-card>
+            </y-card>
+          </y-cards-wrap>
+        </y-section-content>
+      </y-section>
+</div>

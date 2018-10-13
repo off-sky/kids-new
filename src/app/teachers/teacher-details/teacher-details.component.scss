@@ -1,0 +1,14 @@
+.y-teacher-details {
+    &__info-wrap {
+        @media (max-width: 650px) {
+            padding-top: 40px;
+            max-width: 245px;
+        }
+    }
+    &__photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}

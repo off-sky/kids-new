@@ -1,0 +1,44 @@
+<y-section *ngIf="teacher">
+
+    <y-section-title>
+      <y-back-link [url]="['/', school.id, 'teachers' ]"></y-back-link>
+      {{ teacher.displayName }}
+      <y-crumbs>
+        <y-crumb [routerLink]="['/', school.id, 'teachers']">Викладачі</y-crumb>
+        <y-crumb>
+          {{ teacher.displayName }}
+        </y-crumb>
+      </y-crumbs>
+    </y-section-title>
+
+    <y-section-content>
+        <y-cards-wrap>
+          <y-card>
+              <div class="y-teacher-details__photo">
+                <img src="{{teacher.photo}}" width="100">
+              </div>
+          </y-card>
+          <y-card>
+            <div class="y-teacher-details__info-wrap">
+                <y-info-block>
+                  <y-info-label>Спеціальність</y-info-label>
+                  <y-info-text>{{ teacher.displaySpecialty }}</y-info-text>
+                </y-info-block>
+                <y-info-block>
+                  <y-info-label>Досвід у викладанні</y-info-label>
+                  <y-info-text>{{ teacher.experienceYears }} років</y-info-text>
+                </y-info-block>
+                <y-info-block>
+                  <y-info-label>Коротко про вчителя</y-info-label>
+                  <y-info-text>{{ teacher.brief }}</y-info-text>
+                </y-info-block>
+            </div>
+              
+          </y-card>
+          <y-card>
+
+          </y-card>
+        </y-cards-wrap>
+    </y-section-content>
+</y-section>
+

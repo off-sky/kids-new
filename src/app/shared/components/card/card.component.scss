@@ -1,0 +1,17 @@
+.y-card {
+    margin: 0 20px 20px 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    @media (max-width:650px) {
+        margin: 0;
+        margin-bottom: 30px;
+        flex-basis: 100%;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+}

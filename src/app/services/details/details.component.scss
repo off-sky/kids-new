@@ -1,0 +1,115 @@
+@import '../../global_styles/variables.scss';
+
+.m-service-details {
+    padding: 40px $padding;
+}
+
+.m-service-card {
+    width: 290px;
+    font-size: 20px;
+    border: 1px solid $blue-basic;
+    @media(max-width:650px) {
+        width: 250px;
+        font-size: 14px;
+        text-align: center;
+    }
+    &__body {
+        font-size: 80%;
+        padding: 0 20px;
+    }
+    &__header {
+        padding: 20px;
+        background-color: $blue-basic;
+        border-bottom: 1px solid $blue-basic;
+        color: white;
+
+        &__title {
+            text-transform: uppercase;
+            font-size: 100%;
+            text-align: center;
+        }
+
+        &__subtitle {
+            font-size: 60%;
+            text-align: center;
+        }
+    }
+
+    &__description {
+        font-size: 90%;
+        display: flex;
+        align-items: center;
+        &__notes {
+            color: $grey-light;
+            font-size: 80%;
+        }
+    }
+
+    &__discount-icon {
+        @media(max-width:650px) {
+            height: 12px;
+            width: 12px;
+            background-size: 12px 12px;
+        }
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+        background: url('/assets/icons/giftbox.svg') center center/20px 20px no-repeat;
+    }
+
+    &__value {
+        &__price {
+            font-size: 130%;
+        }
+        &__units {
+            font-size: 80%;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+        border-bottom: 1px solid #a8a8a8;
+        @media(max-width:650px) {
+            padding: 20px 0;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__footer {
+        
+        &__header {
+            display: flex;
+            font-size: 80%;
+            margin-bottom: 10px;
+            color: $blue-basic;
+        }
+        &__item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            font-size: 60%;
+            &__anchor {
+                height: 8px;
+                width: 8px;
+                position: relative;
+                top: 2px;
+                border-radius: 50%;
+                background-color: $grey-light;
+                margin-right: 10px;
+                @media(max-width:650px) {
+                    height: 5px;
+                    width: 5px;
+                }
+            }
+            &__description {
+                text-align: left;
+            }
+        }
+        padding: 20px;
+        border-top: 1px solid $blue-basic;
+    }
+}

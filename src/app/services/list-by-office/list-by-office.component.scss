@@ -1,0 +1,48 @@
+@import '../../global_styles/variables.scss';
+
+.y-service-card {
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    border: 1px solid $blue-basic;
+    cursor: pointer;
+    &.english {
+        .y-service-card__image {
+            background: url('/assets/icons/services/english-card-bg.jpg') center center no-repeat;
+        }
+    }
+    &.german {
+        .y-service-card__image {
+            background: url('/assets/icons/services/german-card-bg.jpg') center center/auto 250px no-repeat;
+        }  
+    }
+    &.polish {
+        .y-service-card__image {
+            background: url('/assets/icons/services/polish-card-bg.jpg') center center/auto 250px no-repeat;
+        }  
+    }
+
+
+    &:hover {
+        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.3);
+        // .y-service-card__image {
+        //     opacity: 1;
+        // }
+    }
+
+    &__image {
+        width: 250px;
+        height: 250px;
+    }
+    
+    &__label {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        padding-top: 5px;
+        background-color: $blue-basic;
+        color: white; 
+    }
+}

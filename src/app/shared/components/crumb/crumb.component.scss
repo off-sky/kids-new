@@ -1,0 +1,28 @@
+@import '../../../global_styles/variables.scss';
+
+.y-crumb {
+    &:not(.last) {
+        span {
+            text-decoration: underline;
+            cursor: pointer;
+            &:hover {
+                color: $grey-basic;
+            }
+        }
+        &:after {
+            content: ">";
+            display: inline-block;
+            margin: 0 3px;
+        }
+    }
+
+
+    @media(max-width: 650px) {
+        display: block;
+    }
+    
+    
+    &.last {
+        color: $grey-super-light;
+    }
+}

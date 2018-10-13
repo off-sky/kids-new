@@ -1,0 +1,16 @@
+@import '../../../global_styles/variables.scss';
+
+.y-home-wrap {
+    display: inline-block;
+    height: 13px;
+    width: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#home-icon {
+    fill: $grey-light;
+    &:hover {
+        fill: $grey-basic;
+    }
+}

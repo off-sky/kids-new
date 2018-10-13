@@ -1,0 +1,15 @@
+@import '../../../global_styles/variables.scss';
+
+.y-no-result-placeholder {
+    &__wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    &__content {
+       font-size: 14px;
+       color: $grey-light;
+    }
+}

@@ -1,0 +1,77 @@
+<div class="y-contact-info">
+  <y-section *ngIf="school$ | async; let school;">
+    <y-section-title>
+      Контакти {{ school.city }} ({{ school.streetAddress }})
+    </y-section-title>
+    <y-section-content>
+
+      <div  class="y-contact-info__body">
+          <y-cards-wrap>
+              <!-- Map -->
+              <y-card *ngIf="mapURL$ | async; let mapUrl;">
+                <!-- Mobile map -->
+                <div class="y-contact-info__map mobile">
+                    <iframe [src]="mapUrl"
+                            width="270"
+                            height="300"
+                            frameborder="0"
+                            style="border:0" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <!-- Tablet map -->
+                <div class="y-contact-info__map tablet">
+                    <iframe [src]="mapUrl"
+                            width="420"
+                            height="420"
+                            frameborder="0"
+                            style="border:0" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Desktop map -->
+                <div class="y-contact-info__map desktop">
+                    <iframe [src]="mapUrl"
+                            width="700"
+                            height="700"
+                            frameborder="0"
+                            style="border:0" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+
+              </y-card>
+              
+              <!-- Contact persons -->
+              <y-card>
+                  <div class="y-contact-info__persons">
+                    <div *ngFor="let contact of contactPersons$ | async" class="y-contact-info__persons__item">
+                        <div class="y-contact-info__persons__header">
+                          {{ contact.displayName }}
+                        </div>
+                        <y-info-block *ngIf="contact.email">
+                          <y-info-label>
+                            Ел. пошта
+                          </y-info-label>
+                          <y-info-text>
+                            {{ contact.email }}
+                          </y-info-text>
+                        </y-info-block>
+                        <y-info-block *ngIf="contact.phones">
+                          <y-info-label>
+                            Телефон
+                          </y-info-label>
+                          <y-info-text *ngFor="let phone of contact.phones; let ind=index;">
+                            {{ phone }}<span *ngIf="ind < contact.phones.length - 1">, </span>
+                          </y-info-text>
+                        </y-info-block>
+                    </div>
+                  </div>
+              </y-card>
+          </y-cards-wrap>
+      </div>
+    </y-section-content>
+  </y-section>
+</div>

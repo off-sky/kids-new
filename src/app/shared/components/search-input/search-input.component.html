@@ -1,0 +1,38 @@
+<div class="y-search-input__wrap">
+  <input name="search"
+         type="text"
+         class="y-search-input"
+         placeholder="Пошук по викладачам"
+         [(ngModel)]="searchModel"
+         (ngModelChange)="onInputChange($event)"
+    >
+    <div class="y-search-input__icon-wrap">
+      <div *ngIf="!isSearchActive" class="y-search-input__icon search">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 53.627 53.627"
+            style="enable-background:new 0 0 53.627 53.627;"
+            xml:space="preserve" width="15px" height="15px" class="hovered-paths">
+            <g>
+              <path id="input-icon" d="M53.627,49.385L37.795,33.553C40.423,30.046,42,25.709,42,21C42,9.42,32.58,0,21,0S0,9.42,0,21s9.42,21,21,21  c4.709,0,9.046-1.577,12.553-4.205l15.832,15.832L53.627,49.385z M2,21C2,10.523,10.523,2,21,2s19,8.523,19,19s-8.523,19-19,19  S2,31.477,2,21z" data-original="#000000" class="active-path" data-old_color="#351B1B" fill="#A8A8A8"/>
+            </g>
+          </svg>
+      </div>
+      <div *ngIf="isSearchActive" class="y-search-input__icon clear"
+           (click)="resetSearch()"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Capa_1" x="0px" y="0px"
+                width="15px" height="15px"
+                viewBox="0 0 500 500"
+                style="enable-background:new 0 0 357 357;"
+                xml:space="preserve">
+                <g><g>
+              <g id="clear">
+                <polygon id="input-icon" points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3     214.2,178.5   " data-original="#000000" class="active-path" data-old_color="#AF6D6D" fill="#A8A8A8"/>
+              </g>
+            </g></g> </svg>
+      </div>
+    </div>
+</div>

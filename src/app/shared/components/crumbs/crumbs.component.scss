@@ -1,0 +1,16 @@
+@import '../../../global_styles/variables.scss';
+
+.y-crumbs {
+    display: flex;
+    font-size: 12px;
+    color: $grey-light;
+    &__go-home:after {
+        content: ">";
+        display: inline-block;
+        margin: 0 3px;
+    }
+
+    @media(max-width: 650px) {
+        display: none;
+    }
+}

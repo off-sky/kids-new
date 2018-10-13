@@ -1,0 +1,10 @@
+.y-cards-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    @media (max-width: 650px) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

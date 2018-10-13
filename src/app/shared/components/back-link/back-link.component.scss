@@ -1,0 +1,21 @@
+@import '../../../global_styles/variables.scss';
+
+
+.y-back-link {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    bottom: -3px;
+    #back-link {
+        fill: $grey-light;
+    }
+    &:hover {
+        #back-link {
+            fill: $grey-basic
+        }
+    }
+
+    @media(min-width: 650px) {
+        display: none;
+    }
+}
