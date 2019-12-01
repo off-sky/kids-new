@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     const schoolId = this.route.snapshot.params.schoolId;
-    console.log({ homeSchoolId: schoolId });
   }
 
 }

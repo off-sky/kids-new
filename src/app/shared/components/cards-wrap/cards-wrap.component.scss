@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 
     @media (max-width: 650px) {
         justify-content: center;

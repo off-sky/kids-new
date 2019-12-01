@@ -140,6 +140,7 @@
         width: 50%;
         min-width: 200px;
         margin-bottom: 20px;
+        cursor: pointer;
         &__description {
             text-align: center;
             font-size: 16px;
@@ -150,11 +151,16 @@
             width: 100px;
             height: 100px;
             display: inline-block;
+            box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
             &.english {
                 background: url('/assets/icons/united-kingdom.svg') center center no-repeat;
             }
             &.german {
                 background: url('/assets/icons/germany.svg') center center no-repeat;
+            }
+            &.polish {
+                background: url('/assets/icons/poland.svg') center center no-repeat;
             }
         }
         &__icon-wrap {
@@ -231,8 +237,8 @@
     // background-size: contain;
     // background-color: $blue-basic;
     // height: auto;
-    // $contactus-height: calc((2901 / 4162) * #{$width});
-    // $margin: calc(0.03 * #{$contactus-height});
+    // $contact-us-height: calc((2901 / 4162) * #{$width});
+    // $margin: calc(0.03 * #{$contact-us-height});
     // padding-top: calc((2901 / 4162) * #{$width});
     padding: $padding;
     &__background {
@@ -246,17 +252,18 @@
     &__content-wrap {
         display: inline-block;
         // width: 60%;
-        // height: calc(0.6 * #{$contactus-height});
+        // height: calc(0.6 * #{$contact-us-height});
     }
     &__form {
         background-color: white;
         // opacity: 0.5;
         min-width: 100%;
-        // height: calc(0.5 * #{$contactus-height});
+        // height: calc(0.5 * #{$contact-us-height});
         overflow-y: auto;
         overflow-x: visible;
         padding: 10px;
         box-sizing: border-box;
+
     }
     &__phone-instructions {
         color: $blue-basic;
@@ -276,6 +283,12 @@
         // margin-bottom: $margin;
         margin-top: 25px;
     }
+    &__thank-you-text {
+        color: $blue-basic;
+        font-size: 2vmax;
+        height: 250px;
+        text-align: center;
+    }
     &__title {
         text-align: center;
         font-size: 22px;
@@ -284,31 +297,6 @@
     }
 }
 
-.y-landing__footer {
-    padding: 2vw;
-    background-color: $blue-basic;
-    color: white;
-    font-size: 12px;
-    display: flex;
-    flex-wrap: wrap;
-    &__address, &__designed-by {
-        min-width: 150px;
-        width: 50%;
-        a {
-            text-decoration: none;
-            color: white;
-        }
-    }
-    &__designed-by {
-        position: relative;
-        height: 80px;
-        &__text {
-            position: absolute;
-            right: 2vw;
-            bottom: 5px;
-        }
-    }
-}
 
 @media (max-width: 320px) {
     .y-landing__footer__address, .y-landing__footer__designed-by {
@@ -358,10 +346,15 @@ $label-bottom: 35px;
 $label-bottom-size: 14px;
 $label-top: 55px;
 $label-top-size: 10px;
- .y-contactus-form {
+ .y-contact-us-form {
      opacity: 1;
      width: 100%;
      color: $blue-basic;
+     &__captcha {
+        width: 302px;
+        margin: 0 auto;
+     }
+
      &__label, &__input-wrap, &__row {
          width: 100%;
      }
@@ -398,6 +391,9 @@ $label-top-size: 10px;
          cursor: pointer;
          padding: 10px;
          display: inline-block;
+         &.disabled {
+             opacity: 0.5;
+         }
      }
 
  }

@@ -4,11 +4,32 @@
     fill: $grey-light;
 }
 
-.y-landing__facebook-icon {
-    background: url('/assets/icons/facebook.svg') center center/32px 32px no-repeat;
+
+.y-landing_link-icon {
     display: inline-block;
-    height: 35px;
-    width: 35px;
+    width: 30px;
+    height: 30px;
+}
+
+.y-landing_link-icon-container {
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.y-landing__facebook-icon {
+    background: url('/assets/icons/facebook.svg') center center/28px 28px no-repeat;
+    display: inline-block;
+}
+
+.y-landing__inst-icon {
+    background: url('/assets/icons/instagram.svg') center center/28px 28px no-repeat;
+    display: inline-block;
+}
+
+.y-landing__website-icon {
+    background: url('/assets/icons/website.svg') center center/28px 28px no-repeat;
+    display: inline-block;
 }
 
 
@@ -66,10 +87,13 @@
     &__right {
         text-align: right;
         width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
     }
     &__wrap {
         position: fixed;
-        padding: 10px $padding;
+        padding: 12px $padding;
         font-size: 16px;
         @media (min-width: 1200px) {
             font-size: 18px;
@@ -102,17 +126,16 @@
     &__item {
         border-left: 2px solid $blue-basic;
         color: $blue-basic;
-        opacity: 0.7;
         font-size: 80%;
         cursor: pointer;
         overflow-x: hidden;
         width: 0px;
         &.active {
-            opacity: 1;
-            font-weight: 500;
+            font-weight: 600;
+            color: $blue-dark;
         }
         &:hover {
-            opacity: 1;
+            color: $blue-dark;
         }
     }
 

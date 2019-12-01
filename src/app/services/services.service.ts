@@ -13,27 +13,20 @@ export class ServicesService {
     // English
     'khm_eng_deep': {
       id: 'khm_eng_deep',
-      title: 'Поглиблене вивчення',
-      description: '10 занять по 1 год (45 хв для найменших діток)',
+      title: 'Група 8-14 чоловік',
       schoolId: common.SchoolIds.NARODNA_VOLIA,
       language: common.Languages.ENGLISH,
       services: [
         {
           id: 'big_gr',
-          description: 'Група 6-14 чоловік',
-          amount: 55000,
+          description: '10 занять по 1 год',
+          amount: 58000,
           amountDescription: 'грн'
         },
         {
           id: 'med_gr',
-          description: 'Група 2-5 чоловік',
-          amount: 64000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'personal',
-          description: 'Індивідуально',
-          amount: 150000,
+          description: '10 занять по 1 год 15 хв',
+          amount: 67000,
           amountDescription: 'грн'
         }
       ],
@@ -50,72 +43,154 @@ export class ServicesService {
     },
     'khm_eng_intense': {
       id: 'khm_eng_intense',
-      title: 'Інтенсивне вивчення',
-      description: '10 занять по 1 год 20 хв',
+      title: 'Група 5-7 чоловік',
       schoolId: common.SchoolIds.NARODNA_VOLIA,
       language: common.Languages.ENGLISH,
       services: [
         {
           id: 'big_gr',
-          description: 'Група 6-14 чоловік',
-          amount: 63000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'med_gr',
-          description: 'Група 2-5 чоловік',
-          amount: 74000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'personal',
-          description: 'Індивідуально',
-          amount: 180000,
+          description: '10 занять по 1 год',
+          amount: 65000,
           amountDescription: 'грн'
         }
+        // {
+        //   id: 'med_gr',
+        //   description: '10 занять по 1 год 15 хв',
+        //   amount: 74000,
+        //   amountDescription: 'грн'
+        // }
       ],
-      discounts: null
+      discounts: [
+        {
+          description: 'вивчення 2-х мов однією особою',
+          displayAmount: '5% на другу мову'
+        },
+        {
+          description: 'навчання 2-х або більше дітей з однієї сім\'ї',
+          displayAmount: '5% кожній дитині'
+        }
+      ]
     },
-    'khm_eng_skype': {
-      id: 'khm_eng_skype',
-      title: 'Заняття по Skype, Viber',
-      description: '10 занять по 1 год',
+    'khm_eng_indiv': {
+      id: 'khm_eng_indiv',
+      title: 'Індивідуально',
       schoolId: common.SchoolIds.NARODNA_VOLIA,
       language: common.Languages.ENGLISH,
       services: [
         {
+          id: 'big_gr',
+          description: '10 занять по 1 год',
+          amount: 150000,
+          amountDescription: 'грн'
+        },
+        // {
+        //   id: 'med_gr',
+        //   description: '10 занять по 1 год 15 хв',
+        //   amount: 180000,
+        //   amountDescription: 'грн'
+        // },
+        {
           id: 'personal',
-          description: 'Індивідуально',
+          description: 'По Skype, Viber',
           amount: 170000,
           amountDescription: 'грн'
         }
       ],
       discounts: null
     },
+    'khm_eng_presc': {
+      id: 'khm_eng_presc',
+      title: 'Дошкільнята',
+      schoolId: common.SchoolIds.NARODNA_VOLIA,
+      language: common.Languages.ENGLISH,
+      services: [
+        {
+          id: 'presc1',
+          description: '8 занять по 45 хв',
+          amount: 60000,
+          amountDescription: 'грн'
+        }
+      ],
+      discounts: [
+        {
+          description: 'вивчення 2-х мов однією особою',
+          displayAmount: '5% на другу мову'
+        },
+        {
+          description: 'навчання 2-х або більше дітей з однієї сім\'ї',
+          displayAmount: '5% кожній дитині'
+        }
+      ]
+    },
+    // zno
+    'khm_eng_zno': {
+      id: 'khm_eng_zno',
+      title: 'Підготовка до ЗНО',
+      schoolId: common.SchoolIds.NARODNA_VOLIA,
+      language: common.Languages.ENGLISH,
+      services: [
+        {
+          id: 'zno1',
+          description: '10 занять по 1 год 20 хв',
+          amount: 70000,
+          amountDescription: 'грн'
+        }
+      ],
+      discounts: [
+        {
+          description: 'вивчення 2-х мов однією особою',
+          displayAmount: '5% на другу мову'
+        },
+        {
+          description: 'навчання 2-х або більше дітей з однієї сім\'ї',
+          displayAmount: '5% кожній дитині'
+        }
+      ]
+    },
+
+    // eof zno
+    'khm_eng_grownup': {
+      id: 'khm_eng_grownup',
+      title: 'Дорослі',
+      schoolId: common.SchoolIds.NARODNA_VOLIA,
+      language: common.Languages.ENGLISH,
+      services: [
+        {
+          id: 'big_gr',
+          description: '8 занять по 1 год',
+          amount: 86000,
+          amountDescription: 'грн'
+        },
+        {
+          id: 'med_gr',
+          description: '10 занять по 1 год 15 хв',
+          amount: 100000,
+          amountDescription: 'грн'
+        }
+      ],
+      discounts: [
+        {
+          description: 'вивчення 2-х мов однією особою',
+          displayAmount: '5% на другу мову'
+        },
+        {
+          description: 'навчання 2-х або більше дітей з однієї сім\'ї',
+          displayAmount: '5% кожній дитині'
+        }
+      ]
+    },
     // German
     'khm_ger_deep': {
       id: 'khm_ger_deep',
-      title: 'Поглиблене вивчення',
-      description: '7 занять по 50 хв (45 хв для найменших діток)',
+      title: 'Група 5-8 чоловік',
       schoolId: common.SchoolIds.NARODNA_VOLIA,
       language: common.Languages.GERMAN,
       services: [
         {
           id: 'big_gr',
-          description: 'Група 6-14 чоловік',
-          amount: 43000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'med_gr',
-          description: 'Група 2-5 чоловік',
-          amount: 57000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'personal',
-          description: 'Індивідуально',
-          amount: 100000,
+          description: '7 занять по 50 хв',
+          // notes: '45 хв для найменших діток',
+          amount: 52000,
           amountDescription: 'грн'
         }
       ],
@@ -132,42 +207,72 @@ export class ServicesService {
     },
     'khm_ger_intense': {
       id: 'khm_ger_intense',
-      title: 'Інтенсивне вивчення',
-      description: '7 занять по 1 год 20 хв',
+      title: 'Група 2-4 чоловік',
       schoolId: common.SchoolIds.NARODNA_VOLIA,
       language: common.Languages.GERMAN,
       services: [
         {
           id: 'big_gr',
-          description: 'Група 6-14 чоловік',
-          amount: 65000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'med_gr',
-          description: 'Група 2-5 чоловік',
-          amount: 72000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'personal',
-          description: 'Індивідуально',
-          amount: 140000,
+          description: '7 занять по 50 хв',
+          notes: '45 хв для найменших діток',
+          amount: 68000,
           amountDescription: 'грн'
         }
       ],
-      discounts: null
+      discounts: [
+        {
+          description: 'вивчення 2-х мов однією особою',
+          displayAmount: '5% на другу мову'
+        },
+        {
+          description: 'навчання 2-х або більше дітей з однієї сім\'ї',
+          displayAmount: '5% кожній дитині'
+        }
+      ]
     },
-    'khm_ger_skype': {
-      id: 'khm_ger_skype',
-      title: 'Заняття по Skype, Viber',
-      description: '7 занять по 1 год',
+    // 'khm_ger_grownups': {
+    //   id: 'khm_ger_grownups',
+    //   title: 'Дорослі',
+    //   schoolId: common.SchoolIds.NARODNA_VOLIA,
+    //   language: common.Languages.GERMAN,
+    //   services: [
+    //     {
+    //       id: 'deep',
+    //       description: '7 занять по 50 хв',
+    //       amount: 76000,
+    //       amountDescription: 'грн'
+    //     },
+    //     {
+    //       id: 'intense',
+    //       description: '7 занять по 1 год 15 хв',
+    //       amount: 84000,
+    //       amountDescription: 'грн'
+    //     }
+    //   ],
+    //   discounts: null
+    // },
+    'khm_ger_indiv': {
+      id: 'khm_ger_indiv',
+      title: 'Індивідуально',
       schoolId: common.SchoolIds.NARODNA_VOLIA,
       language: common.Languages.GERMAN,
       services: [
         {
-          id: 'personal',
-          description: 'Індивідуально',
+          id: 'deep',
+          description: '7 занять по 1 год',
+          amount: 105000,
+          amountDescription: 'грн'
+        },
+        // {
+        //   id: 'intense',
+        //   description: '7 занять по 1 г 15 хв',
+        //   amount: 170000,
+        //   amountDescription: 'грн'
+        // },
+        {
+          id: 'skype',
+          description: 'По Skype, Viber',
+          notes: '7 занять по 1 год',
           amount: 120000,
           amountDescription: 'грн'
         }
@@ -177,27 +282,15 @@ export class ServicesService {
     // Polish
     'khm_pol_deep': {
       id: 'khm_pol_deep',
-      title: 'Поглиблене вивчення',
-      description: '7 занять по 50 хв (45 хв для найменших діток)',
+      title: 'Група 5-8 чоловік',
       schoolId: common.SchoolIds.NARODNA_VOLIA,
       language: common.Languages.POLISH,
       services: [
         {
           id: 'big_gr',
-          description: 'Група 6-14 чоловік',
-          amount: 43000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'med_gr',
-          description: 'Група 2-5 чоловік',
-          amount: 57000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'personal',
-          description: 'Індивідуально',
-          amount: 100000,
+          description: '7 занять по 50 хв',
+          // notes: '45 хв для найменших діток',
+          amount: 42500,
           amountDescription: 'грн'
         }
       ],
@@ -214,47 +307,57 @@ export class ServicesService {
     },
     'khm_pol_intense': {
       id: 'khm_pol_intense',
-      title: 'Інтенсивне вивчення',
-      description: '7 занять по 1 год 20 хв',
+      title: 'Група 2-4 чоловік',
       schoolId: common.SchoolIds.NARODNA_VOLIA,
       language: common.Languages.POLISH,
       services: [
         {
           id: 'big_gr',
-          description: 'Група 6-14 чоловік',
-          amount: 65000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'med_gr',
-          description: 'Група 2-5 чоловік',
-          amount: 72000,
-          amountDescription: 'грн'
-        },
-        {
-          id: 'personal',
-          description: 'Індивідуально',
-          amount: 140000,
+          description: '7 занять по 50 хв',
+          // notes: '45 хв для найменших діток',
+          amount: 60000,
           amountDescription: 'грн'
         }
       ],
-      discounts: null
+      discounts: [
+        {
+          description: 'вивчення 2-х мов однією особою',
+          displayAmount: '5% на другу мову'
+        },
+        {
+          description: 'навчання 2-х або більше дітей з однієї сім\'ї',
+          displayAmount: '5% кожній дитині'
+        }
+      ]
     },
-    'khm_pol_skype': {
-      id: 'khm_pol_skype',
-      title: 'Заняття по Skype, Viber',
-      description: '7 занять по 1 год',
+    'khm_pol_indiv': {
+      id: 'khm_pol_indiv',
+      title: 'Індивідуальні заняття',
       schoolId: common.SchoolIds.NARODNA_VOLIA,
       language: common.Languages.POLISH,
       services: [
         {
+          id: 'big_gr',
+          description: '7 занять по 1 год',
+          // notes: '45 хв для найменших діток',
+          amount: 105000,
+          amountDescription: 'грн'
+        },
+        // {
+        //   id: 'big_gr',
+        //   description: '7 занять по 1 г 15 хв',
+        //   amount: 170000,
+        //   amountDescription: 'грн'
+        // },
+        {
           id: 'personal',
-          description: 'Індивідуально',
+          description: 'По Skype. Viber',
+          notes: '7 занять по 1 год',
           amount: 120000,
           amountDescription: 'грн'
         }
       ],
-      discounts: null
+      
     },
     //// Irpin
     // English

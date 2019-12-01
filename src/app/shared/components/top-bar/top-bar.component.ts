@@ -73,7 +73,7 @@ export class TopBarComponent implements AfterViewInit, OnDestroy, OnInit {
       hasBackdrop: true,
       width: '300px',
       position: {
-        top: '100px'
+        top: '30px'
       }
     });
   }

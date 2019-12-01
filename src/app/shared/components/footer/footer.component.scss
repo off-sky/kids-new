@@ -1,0 +1,27 @@
+@import '../../../global_styles/variables.scss';
+
+.y-landing__footer {
+    padding: 2vw;
+    background-color: $blue-basic;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    &__address, &__designed-by {
+        min-width: 150px;
+        width: 50%;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    &__designed-by {
+        position: relative;
+        height: 80px;
+        &__text {
+            position: absolute;
+            right: 2vw;
+            bottom: 5px;
+        }
+    }
+}

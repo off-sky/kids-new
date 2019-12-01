@@ -15,6 +15,7 @@ import { schools } from '../../../types/schools';
 export class ListByOfficeComponent implements OnInit {
 
   public langs$: Observable<common.Language[]>;
+  public langsEmpty$: Observable<boolean>;
   public school$: Observable<schools.School>;
 
   constructor(
@@ -33,10 +34,12 @@ export class ListByOfficeComponent implements OnInit {
     this.langs$ = this.route.data
       .pipe(
         map(data => {
-          console.log(data);
           return data.langs
         })
       )
+    
+    this.langsEmpty$ = this.langs$
+      .pipe(map(langs => langs.length === 0));
 
     this.school$ = this.route.parent.parent.data
       .pipe(

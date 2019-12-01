@@ -2,7 +2,7 @@
   <div class="y-landing__frame">
     <div class="y-landing__jumbotron">
       <div class="y-landing__jumbotron__photo">
-        <div class="y-landing__jumbotron__title">Відкрийте світ <br>для своєї дитини</div>
+        <div class="y-landing__jumbotron__title">Відкрийте новий світ <br>для себе та своєї дитини</div>
         <div class="y-landing__jumbotron__text">Знання однієї мови дозволяє увійти в коридор життя, 
             знання декількох – відкриває вам усі двері у цьому коридорі. <br><br>
             <span class="y-landing__jumbotron__text__author">Франк Сміт.</span>
@@ -17,7 +17,9 @@
       </div>
     </div>
     <div class="y-landing__languages">
-      <div class="y-landing__languages__item">
+      <div class="y-landing__languages__item"
+           (click)="onLangClick(Languages.ENGLISH)"
+        >
         <div class="y-landing__languages__item__title">Англійська</div>
         <div class="y-landing__languages__item__icon-wrap">
           <div class="y-landing__languages__item__icon english"></div>
@@ -27,7 +29,9 @@
           з "привілею еліт" на базову навичку для сучасної людини.
         </div>
       </div>
-      <div class="y-landing__languages__item">
+      <div class="y-landing__languages__item"
+           (click)="onLangClick(Languages.GERMAN)"
+        >
         <div class="y-landing__languages__item__title">Німецька</div>
         <div class="y-landing__languages__item__icon-wrap">
             <div class="y-landing__languages__item__icon german"></div>
@@ -37,12 +41,64 @@
           письменників та музикантів. Також німецька займає друге місце за частотою вживання у міжнародній науці.
         </div>
       </div>
+      <div class="y-landing__languages__item"
+           (click)="onLangClick(Languages.POLISH)"
+        >
+        <div class="y-landing__languages__item__title">Польська</div>
+        <div class="y-landing__languages__item__icon-wrap">
+            <div class="y-landing__languages__item__icon polish"></div>
+          </div>
+        <div class="y-landing__languages__item__description">
+          Польська абетка виникла на базі латинського алфавіту й складається з 32 букв, однак 9 із них немає в жодному іншому алфавіті. Шукаєте чогось особливого? Вивчайте польську!
+                     
+        </div>
+      </div>
     </div>
     <div class="y-landing__overview">
-      <div class="y-landing__overview__title">Kids English & Deutsch</div>
+      <div class="y-landing__overview__title">Центр вивчення іноземних мов Kids</div>
       <div class="y-landing__overview__text">
-          Ми - це товариство викладачів іноземних мов, які пропонують ефективне та всебічне вивчення англійської та німецької (а саме: граматики, говоріння, письма, читання, сприйняття мови на слух та, обов'язково, вимови) 
-         Ми намагаємось забезпечити "повне занурення" учня у мовне середовище (адже 90% заняття викладається іноземною).
+
+          <p>
+            Ми - центр вивчення іноземних мов, що пропонує ефективне та всебічне вивчення англійської, німецької та польської (а саме: граматики, говоріння, письма, читання, сприйняття мови на слух та, обов'язково, вимови). Ми намагаємось забезпечити "повне занурення" учня у мовне середовище (адже 90% заняття викладається саме іноземною мовою).
+          </p>
+
+          <p>
+            Працюємо з дітками та дорослими від 3-х та до 103-х років.
+          </p>
+
+          Kids is a place where you'll find
+          <ul>
+              <li>
+                  <b>K</b>nowledge
+              </li>
+              <li>
+                  <b>I</b>nspiration
+              </li>
+              <li>
+                  <b>D</b>reams
+              </li>
+              <li>
+                  <b>S</b>upport
+              </li>
+            </ul>
+            
+     
+            Ми для Вас, якщо Ви:
+            <ul>
+              <li>
+                  прагнете рости і розвиватись, отримувати нові знання (<b>Knowledge</b>), відкривати нові грані світу з новою мовою.
+              </li>
+              <li>
+                  шукаєте натхнення (<b>Inspiration</b>) для яскравого та насиченого життя 
+              </li>
+              <li>
+                  мрієте (<b>Dream</b>) про незвідані далі 
+              </li>
+              <li>
+                  потребуєте підтримки (<b>Support</b>)  для реалізації попередніх пунктів
+              </li>
+            </ul>  
+          
       </div>
     </div>
     <div class="y-landing__services">
@@ -61,7 +117,7 @@
         <div class="y-landing__services__item">
           <div class="y-landing__services__item__title">Заняття по Skype або Viber</div>
           <div class="y-landing__services__item__icon remote"></div>
-          <div class="y-landing__services__item__brief">Живете не в Хмельницькому? Не маєте часу ходити до класу? Тепер це не проблема! Оберіть один із форматів дистанційного навчання у Kids English & Deutsch!</div>
+          <div class="y-landing__services__item__brief">Живете не в Хмельницькому? Не маєте часу ходити до класу? Тепер це не проблема! Оберіть один із форматів дистанційного навчання у Центрі іноземних мов KIDS!</div>
         </div>
         <div class="y-landing__services__item">
           <div class="y-landing__services__item__title">Підготовка до ЗНО, ДПА тощо</div>
@@ -89,41 +145,19 @@
               <div class="y-landing__reviews__item__author">{{ rev.authorName }}</div>
           </div>
         </div>
-        <!-- <div class="y-landing__reviews__item">
-          <div class="y-landing__reviews__item__left">
-              <div class="y-landing__reviews__item__photo">
-                <img src="/assets/img/client_cropped.jpg" alt="Review author photo" width="100" height="100">
-              </div>
-          </div>
-          <div class="y-landing__reviews__item__right">
-              <div class="y-landing__reviews__item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-              <div class="y-landing__reviews__item__author">Іванова Іванна Іванівна</div>
-          </div>
-        </div>
-        <div class="y-landing__reviews__item">
-          <div class="y-landing__reviews__item__left">
-              <div class="y-landing__reviews__item__photo">
-                <img src="/assets/img/client_cropped.jpg" alt="Review author photo" width="100" height="100">
-              </div>
-          </div>
-          <div class="y-landing__reviews__item__right">
-              <div class="y-landing__reviews__item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-              <div class="y-landing__reviews__item__author">Іванова Іванна Іванівна</div>
-          </div>
-        </div> -->
       </div>
     </div>
     <div #contactForm class="y-landing__contact-us">
       <div class="y-landing__contact-us__background">
-          <div class="y-landing__contact-us__content-wrap">
+          <div *ngIf="!isSubmitted" class="y-landing__contact-us__content-wrap">
               <div class="y-landing__contact-us__title">Чекаємо на Вас!</div>
               <div class="y-landing__contact-us__instructions">Заповніть цю форму, і ми зв'яжемось із Вами.</div>
               <div class="y-landing__contact-us__form">
-                <form class="y-contactus-form">
-                  <div class="y-contactus-form__row" (click)="onFormRowClick(nameLabel, nameInput, 'name')">
-                    <div #nameLabel class="y-contactus-form__label">Як до Вас звертатись</div>
-                    <div class="y-contactus-form__iput-wrap">
-                      <input #nameInput class="y-contactus-form__input"
+                <form class="y-contact-us-form">
+                  <div class="y-contact-us-form__row" (click)="onFormRowClick(nameLabel, nameInput, 'name')">
+                    <div #nameLabel class="y-contact-us-form__label">Як до Вас звертатись</div>
+                    <div class="y-contact-us-form__iput-wrap">
+                      <input #nameInput class="y-contact-us-form__input"
                               name="customerName"
                               [(ngModel)]="customerForm.name"
                               (blur)="onFormInputBlur(nameLabel, nameInput, 'name')"
@@ -131,10 +165,10 @@
                               >
                     </div>
                   </div>
-                  <div class="y-contactus-form__row" (click)="onFormRowClick(phoneLabel, phoneInput, 'phone')">
-                      <div #phoneLabel class="y-contactus-form__label">Ваш телефон</div>
-                      <div class="y-contactus-form__iput-wrap">
-                        <input #phoneInput class="y-contactus-form__input"
+                  <div class="y-contact-us-form__row" (click)="onFormRowClick(phoneLabel, phoneInput, 'phone')">
+                      <div #phoneLabel class="y-contact-us-form__label">Ваш телефон</div>
+                      <div class="y-contact-us-form__iput-wrap">
+                        <input #phoneInput class="y-contact-us-form__input"
                                name="phone"
                                [(ngModel)]="customerForm.phone"
                                (blur)="onFormInputBlur(phoneLabel, phoneInput, 'phone')"
@@ -142,10 +176,10 @@
                                >
                       </div>
                   </div>
-                  <div class="y-contactus-form__row" (click)="onFormRowClick(emailLabel, emailInput, 'email')">
-                      <div #emailLabel class="y-contactus-form__label">Ваша електронна скринька</div>
-                      <div class="y-contactus-form__iput-wrap">
-                        <input #emailInput class="y-contactus-form__input"
+                  <div class="y-contact-us-form__row" (click)="onFormRowClick(emailLabel, emailInput, 'email')">
+                      <div #emailLabel class="y-contact-us-form__label">Ваша електронна скринька</div>
+                      <div class="y-contact-us-form__iput-wrap">
+                        <input #emailInput class="y-contact-us-form__input"
                                name="email"
                                [(ngModel)]="customerForm.email"
                                (blur)="onFormInputBlur(emailLabel, emailInput, 'email')"
@@ -153,43 +187,49 @@
                                >
                       </div>
                   </div>
-                  <div class="y-contactus-form__row" (click)="onFormRowClick(serviceLabel, serviceInput, 'service')">
-                      <div #serviceLabel class="y-contactus-form__label">Які послуги Вас цікавлять</div>
-                      <div class="y-contactus-form__input-wrap">
-                        <input #serviceInput class="y-contactus-form__input"
+                  <div class="y-contact-us-form__row" (click)="onFormRowClick(serviceLabel, serviceInput, 'service')">
+                      <div #serviceLabel class="y-contact-us-form__label">Які послуги Вас цікавлять</div>
+                      <div class="y-contact-us-form__input-wrap">
+                        <input #serviceInput class="y-contact-us-form__input"
                               name="service"
-                              [(ngModel)]="customerForm.service"
+                              [(ngModel)]="customerForm.serviceId"
                               (blur)="onFormInputBlur(serviceLabel, serviceInput, 'service')"
                               (focus)="onFormRowClick(serviceLabel, serviceInput, 'service')"
                               >
                       </div>
                   </div>
-                  <div class="y-contactus-form__row">
-                      <div class="y-contactus-form__submit-btn">
+                  <div class="y-contact-us-form__row">
+                      <div yCaptcha class="y-contact-us-form__captcha"
+                           (submitted)="onCaptchaSubmit($event)"
+                        >
+                      </div>
+                  </div>
+                  <div class="y-contact-us-form__row">
+                      <div *ngIf="!isSubmitting"
+                           class="y-contact-us-form__submit-btn"
+                           [ngClass]="{ 'disabled': !customerForm.isValid }"
+                           (click)="onContactFormSubmit()"
+                        >
                         Надіслати
+                      </div>
+                      <div *ngIf="isSubmitting">
+                        Завантаження...
                       </div>
                   </div>
                 </form>
               </div>
               <div class="y-landing__contact-us__phone-instructions">
-                або зателефонуйте на номер 
+                або зателефонуйте
               </div>
-              <div class="y-landing__contact-us__phone-no">
-                <a href="tel:380631773311">0631773311</a>
+              <div *ngFor="let phone of contactNums" class="y-landing__contact-us__phone-no">
+                <a href="tel:{{phone}}">{{phone}}</a>
               </div>
+          </div>
+          <div *ngIf="isSubmitted" class="y-landing__contact-us__thank-you-text">
+            Дякуємо! Ми зв'яжемось із Вами найближчим часом!
           </div>
       </div>
     </div>
-    <div class="y-landing__footer">
-      <div class="y-landing__footer__address">
-        Kids English & Deutsch,<br>
-        м. Хмельницький, мкрн Ракове,<br>
-        вулиця Народної Волі, 1а, корп. 2<br>
-        <a href="mailto: kate_ivasenko5@i.ua">kate_ivasenko5@i.ua</a>
-      </div>
-      <div class="y-landing__footer__designed-by">
-        <span class="y-landing__footer__designed-by__text">Designed by <a href="mailto:petrodzher@gmail.com">offsky</a></span>
-      </div>
-    </div>
+    <y-footer></y-footer>
   </div>
 </div>

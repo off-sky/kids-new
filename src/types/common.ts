@@ -26,11 +26,12 @@ export module common {
         }
     }
 
-    export type SchoolId = 'narodna_volia' | 'irpin';
+    export type SchoolId = 'narodna_volia' | 'irpin' | 'ozerna';
 
     export class SchoolIds {
         public static readonly NARODNA_VOLIA: SchoolId = 'narodna_volia';
         public static readonly IRPIN: SchoolId = 'irpin';
+        public static readonly OZERNA: SchoolId = 'ozerna';
 
         public static getBriefOfficeName(officeId: SchoolId): string {
             switch(officeId) {
@@ -39,6 +40,9 @@ export module common {
                 }
                 case SchoolIds.IRPIN: {
                   return 'Шевченка, 25';
+                }
+                case SchoolIds.OZERNA: {
+                    return 'Озерна';
                 }
             }
         }
@@ -50,6 +54,9 @@ export module common {
                 }
                 case SchoolIds.IRPIN: {
                     return 'Ірпінь (вул. Шевченка, 25)';
+                }
+                case SchoolIds.OZERNA: {
+                    return 'Хмельницький, район Озерна';
                 }
             }
         }

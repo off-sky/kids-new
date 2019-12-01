@@ -3,7 +3,7 @@
 .y-teacher-card {
     width: 245px;
     height: 395px;
-    border: 1px solid #109B88;
+    border: 1px solid #ed7d1a;
     font-size: 16px;
     margin-bottom: 50px;
     cursor: pointer;
@@ -24,7 +24,7 @@
         text-overflow: ellipsis;
     }
     &__top {
-        background-color: #109B88;
+        background-color: #ed7d1a;
         height: 80px;
         display: flex;
         justify-content: center;
@@ -34,7 +34,7 @@
         cursor: pointer;
         font-size: 80%;
         text-align: center;
-        background-color: #109B88;
+        background-color: #ed7d1a;
         width: 100px;
         height: 30px;
         display: flex;

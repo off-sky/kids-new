@@ -12,8 +12,8 @@ export module services {
 
     export class Category {
         id: string;
-        description: string;
-        discounts: Discount[];
+        description?: string;
+        discounts?: Discount[];
         language: common.Language;
         title: string;
         schoolId: common.SchoolId;

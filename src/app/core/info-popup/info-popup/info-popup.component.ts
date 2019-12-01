@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'y-info-popup',
@@ -13,12 +13,17 @@ export class InfoPopupComponent implements OnInit {
   public header: string;
 
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: { header: string; text: string}
+    @Inject(MAT_DIALOG_DATA) public data: { header: string; text: string},
+    private dialogRef: MatDialogRef<InfoPopupComponent>
   ) { }
 
   ngOnInit() {
     this.text = this.data.text;
     this.header = this.data.header;
+  }
+
+  public onClose(): void {
+    this.dialogRef.close();
   }
 
 }

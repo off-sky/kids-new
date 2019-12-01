@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SchoolSelectService } from './core/services/school-select.service';
 import { ActivatedRoute } from '@angular/router';
+import { init } from './init-fb';
 
 @Component({
   selector: 'y-root',
@@ -17,5 +18,6 @@ export class AppComponent {
   ngOnInit() {
     const schoolId = this.route.snapshot.params.schoolId;
     console.log({ homeSchoolId: schoolId });
+    init();
   }
 }

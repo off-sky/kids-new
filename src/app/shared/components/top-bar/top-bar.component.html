@@ -63,8 +63,25 @@
         </div>
       </div>
     </div>
-    <div class="y-landing__top-bar__right">
-      <a href="https://www.facebook.com/kids.khm"><div class="y-landing__facebook-icon"></div></a>
+    <div *ngIf="currentSchool$ | async; let currSchool;" class="y-landing__top-bar__right">
+      <div *ngIf="currSchool.facebookUrl" class="y-landing_link-icon-container">
+          <a  href="{{currSchool.facebookUrl}}">
+              <div class="y-landing_link-icon y-landing__facebook-icon"></div>
+          </a>
+      </div>
+      
+      <div *ngIf="currSchool.instUrl" class="y-landing_link-icon-container">
+          <a  href="{{currSchool.instUrl}}">
+              <div class="y-landing_link-icon y-landing__inst-icon"></div>
+          </a>
+      </div>
+
+     <div *ngIf="currSchool.website" class="y-landing_link-icon-container">
+        <a  href="{{currSchool.website}}">
+          <div class="y-landing_link-icon y-landing__website-icon"></div>
+        </a>
+     </div>
+     
     </div>
   </div>
 
@@ -161,7 +178,9 @@
       </div>
     </div>
     <div class="y-landing__top-bar__right">
-      <a href="https://www.facebook.com/kids.khm"><div class="y-landing__facebook-icon"></div></a>
+      <a *ngIf="" href="https://www.facebook.com/kids.khm">
+        <div class="y-landing__facebook-icon"></div>
+      </a>
     </div>
   </div>
 

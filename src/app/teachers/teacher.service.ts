@@ -21,7 +21,7 @@ export class TeacherService {
         '(097) 976 3527': '(097) 976 3527',
         '(063) 177 3311': '(063) 177 3311'
       },
-      photo: '/assets/img/teachers/Kate.jpg',
+      photo: '/assets/img/teachers/Kate.png',
       displaySpecialty: 'Викладач англійської, німецької мов'
     },
     '2': {
@@ -30,9 +30,9 @@ export class TeacherService {
       first_name: 'Дмитро Юрійович',
       last_name: 'Білоус',
       languages: [common.Languages.ENGLISH],
-      brief: `Харизматичний та веселий вчитель, який чудово знаходить спільну мову з дітьми. Перетворює навчальний процес про захоплюючу гру, у яку діти занурюються із головою. Вміло користується сучасними методиками навчання. Має досвід викладання в європейських країнах.`,
+      brief: `Харизматичний та веселий вчитель, який чудово знаходить спільну мову з дітьми. Перетворює навчальний процес на захоплюючу гру, у яку діти занурюються із головою. Вміло користується сучасними методиками навчання. Має досвід викладання в європейських країнах.`,
       office: common.SchoolIds.NARODNA_VOLIA,
-      photo: '/assets/img/teachers/Dima.jpg',
+      photo: '/assets/img/teachers/Dima1.png',
       phones: {
         '(093) 221 8872': '(093) 221 8872'
       },
@@ -49,17 +49,6 @@ export class TeacherService {
       photo: '/assets/img/teachers/Kristina.jpg',
       displaySpecialty: 'Викладач англійської мови'
     },
-    '4': {
-      id: '4',
-      experience_years: 8,
-      first_name: 'Роман Володимирович',
-      last_name: 'Пашковський',
-      languages: [common.Languages.ENGLISH],
-      brief: `Лорем ипсум долор сит амет, про модо хабемус инцидеринт ет, ат витае моллис ириуре вел, пауло яуалисяуе интеллегебат еа иус.`,
-      office: common.SchoolIds.IRPIN,
-      photo: '/assets/img/teachers/Roma.jpeg',
-      displaySpecialty: 'Викладач англійської мови'
-    },
     '5': {
       id: '5',
       experience_years: 8,
@@ -70,7 +59,7 @@ export class TeacherService {
       office: common.SchoolIds.IRPIN,
       photo: '/assets/img/teachers/Natalia.jpg',
       phones: {
-        '(999) 999 9999': '(999) 999 9999'
+        '(067) 779 7022': '(067) 779 7022'
       },
       displaySpecialty: 'Викладач англійської мови'
     }

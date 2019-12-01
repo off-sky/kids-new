@@ -28,6 +28,8 @@ import { CloseBtnComponent } from './components/close-btn/close-btn.component';
 import { InfoBlockComponent } from './components/info-block/info-block.component';
 import { InfoLabelComponent } from './components/info-label/info-label.component';
 import { InfoTextComponent } from './components/info-text/info-text.component';
+import { CaptchaDirective } from './directives/captcha.directive';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -62,10 +64,13 @@ import { InfoTextComponent } from './components/info-text/info-text.component';
     WorkInProgressComponent,
     PopupHeaderComponent,
     PopupActionBarComponent,
-    CloseBtnComponent
+    CloseBtnComponent,
+    CaptchaDirective,
+    FooterComponent
   ],
   exports: [
     BackLinkComponent,
+    CaptchaDirective,
     CardsWrapComponent,
     CardComponent,
     CrumbsComponent,
@@ -81,12 +86,14 @@ import { InfoTextComponent } from './components/info-text/info-text.component';
     // Material
     MatDialogModule,
     NoResultsPlaceholderComponent,
+    PopupHeaderComponent,
     SearchInputComponent,
     SectionComponent,
     SectionContentComponent,
     SectionTitleComponent,
     TopBarComponent,
-    WorkInProgressComponent
+    WorkInProgressComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

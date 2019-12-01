@@ -6,7 +6,7 @@
     <y-section-content>
 
       <div  class="y-list-by-office__services">
-          <y-cards-wrap>
+          <y-cards-wrap *ngIf="!(langsEmpty$ | async); else placeholder;">
               <!-- English -->
               <y-card *ngFor="let lang of langs$ | async">
                 <div class="y-service-card {{lang}}" [routerLink]="[ lang ]">
@@ -17,6 +17,11 @@
                 </div>
               </y-card>      
           </y-cards-wrap>
+          <ng-template #placeholder>
+            <y-work-in-progress>
+              Триває наповнення розділу. Дізнайтесь більше за телефоном у розділі "Контакти".
+            </y-work-in-progress>
+          </ng-template>
       </div>
     </y-section-content>
   </y-section>

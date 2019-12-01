@@ -1,6 +1,8 @@
 <div class="y-info-popup">
     <div class="y-info-popup__header">
-      {{ header }}
+      <y-popup-header  (closed)="onClose()">
+        {{ header }}
+      </y-popup-header>
     </div>
     <div class="y-info-popup__text">
       {{ text }}

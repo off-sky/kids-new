@@ -16,6 +16,7 @@ export class TeachersByOfficeComponent implements OnInit {
 
   public school$: Observable<schools.School>
   public teachers$: Observable<teachers.Teacher[]>;
+  public teachersEmpty$: Observable<boolean>;
   public headerText: string;
   public crumbText: string;
 
@@ -38,6 +39,11 @@ export class TeachersByOfficeComponent implements OnInit {
     this.school$ = this.route.parent.parent.data
       .pipe(
         map(data => data.school)
+      );
+
+    this.teachersEmpty$ = this.route.data
+      .pipe(
+        map(data => !!data.teachers && data.teachers.length === 0)
       )
   }
 

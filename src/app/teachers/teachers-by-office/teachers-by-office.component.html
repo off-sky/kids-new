@@ -6,13 +6,18 @@
         </y-section-title>
     
         <y-section-content>
-          <y-cards-wrap>
+          <y-cards-wrap *ngIf="!(teachersEmpty$ | async); else placeholder;">
             <y-card *ngFor="let teacher of teachers$ | async"
                     [routerLink]="[teacher.id]"
               >
                 <y-teacher-card [teacher]="teacher"></y-teacher-card>
             </y-card>
           </y-cards-wrap>
+          <ng-template #placeholder>
+            <y-work-in-progress>
+              Триває наповнення розділу. Дізнайтесь подробиці за телефоном у розділі "Контакти".
+            </y-work-in-progress>
+          </ng-template>
         </y-section-content>
       </y-section>
 </div>
